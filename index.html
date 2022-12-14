@@ -8,14 +8,150 @@
     <title>Home - Ecommerce</title>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-links">
-            <a href="" class="nav-item active">Link 1</a>
-            <a href="" class="nav-item">Link 2</a>
-            <a href="" class="nav-item">Link 3</a>
-            <a href="" class="nav-item">Link 4</a>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html" class="navbar__nav-link">
+                <img class="navbar__logo" src="/assets/images/logo.png" alt="" width="50">
+            </a>
+            <ul class="navbar__nav-links-container">
+                <li class="navbar__nav-item">
+                    <a href="/index.html" class="navbar__nav-link">Inicio</a>
+                </li>
+                <li class="navbar__nav-item">
+                    <a href="/pages/contact/contact.html" class="navbar__nav-link">Contacto</a>
+                </li>
+                <li class="navbar__nav-item">
+                    <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Nosotros</a>
+                </li>
+                <li class="navbar__nav-item">
+                    <a href="/pages/register/register.html" class="navbar__nav-link">Registrarse</a>
+                </li>
+            </ul>
+            
+        </nav>
+        <div class="user-navbar">
+           <div class="user-navbar__cart-icon-container">
+            <!-- TODO_ add font icon and icon item -->
+           </div> 
+           <!-- TODO_ avatar de la persona logueada o nombre -->    
         </div>
-    </nav>
-
+    </header>
+    <!-- TODO: Implementar carrusel en segundo modulo -->
+    <main>
+        <section class="section-cards">
+            <header class="section-cards__header">
+                <div class="section-cards__title-container">
+                    <h1 class="section-cards__title">
+                        Lorem ipsum dolor sit amet.
+                    </h1>
+                    <p class="section-cards_subtitle">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus placeat rem sunt ratione quae explicabo?
+                    </p>
+                </div>
+                <div class="section-cards__products-search-conteiner">
+                    <div class="product-search">
+                        <label for="" class="product-search__label">Buscar</label>
+                        <input type="Text" class="product-search__input">
+                        <button class="product-search__btn">Buscar</button>
+                    </div>
+                    <div class="section-cards__products-count">
+                        Se encontraron X Productos
+                    </div>
+                </div>
+                
+            </header>
+            <div class="cards-container">
+                <h1 class="cards-container__category">
+                    Categoria: Ofertas
+                </h1>
+                <article class="card">
+                    <div class="card__header">
+                        <img src="#" alt="#" class="card__image">
+                    </div>
+                    <div class="card__body">
+                        <div class="card__title">
+                            Product Name
+                        </div>
+                        <p class="card__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dignissimos officiis quam ab ullam doloribus animi tempora earum fugiat. Cum.
+                        </p>
+                        <div class="card__price">
+                            $ 000,00
+                        </div>
+                    </div>
+                    <div class="card__footer">
+                        <div class="card__date">
+                            13/12/2022
+                        </div>
+                        <div class="card__btn-container">
+                            <a href="#" class="card__btn">
+                                Detalle
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <div class="whatsapp-container">
+        <a href="" class="whatsapp-container__link">
+            <img src="#" alt="Company Logo" class="whatsapp-container__img">
+        </a>
+    </div>
+    <footer class="footer">
+        <div class="footer_column">
+            <ul class="footer__contact-container">
+                <li class="footer__contact-item">
+                    <a href="" class="footer__contact-link">
+                        <!-- Icono -->
+                        Facebook
+                    </a>
+                </li>
+                <li class="footer__contact-item">
+                    <a href="" class="footer__contact-link">
+                        <!-- Icono -->
+                        Instagram
+                    </a>
+                </li>
+                <li class="footer__contact-item">
+                    <a href="" class="footer__contact-link">
+                        <!-- Icono -->
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_column">
+            <img src="#" alt="#" class="footer__logo">
+            <h1 class="footer__company-name">
+                Nombre de la Empresa
+            </h1>
+            <p class="footer copyright">
+                Todos los derechos reservados a Pepito
+            </p>
+        </div>
+        <div class="footer_column">
+            <ul class="footer__contact-container">
+                <li class="footer__contact-item">
+                    <a href="" class="footer__contact-link">
+                        <!-- Icono -->
+                        Telefono
+                    </a>
+                </li>
+                <li class="footer__contact-item">
+                    <a href="" class="footer__contact-link">
+                        <!-- Icono -->
+                        Localizacion
+                    </a>
+                </li>
+                <li class="footer__contact-item">
+                    <a href="" class="footer__contact-link">
+                        <!-- Icono -->
+                        Email
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
