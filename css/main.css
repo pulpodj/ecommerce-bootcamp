@@ -9,6 +9,7 @@
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 body {
@@ -38,6 +39,36 @@ body {
   color: darkred;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+}
+.footer__column {
+  padding: 1rem 1.5rem;
+}
+.footer__contact-item {
+  list-style: none;
+}
+.footer__contact-link {
+  color: white;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer .footer__contact-icon {
+  font-size: 1.5rem;
+}
+.footer .footer__contact-icon--facebook {
+  color: #38529a;
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    flex-direction: row;
+  }
+}
 .card {
   padding: 1rem;
   border: 1px solid #666;
