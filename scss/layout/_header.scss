@@ -1,26 +1,123 @@
+.header {
+    position: fixed;
+    width: 100%;
+}
 
 .navbar {
-    background-color: $color-gb-primary;
+    background-color: $color-gb-secondary;
     color: $color-text-light;
     height: 60px;
     display: flex;
     align-items: center;
+    position: relative;
+    
 
-    .__nav-links-container {
-        padding: 2rem;
-
-        .navbar-item {
-            text-decoration: none;
-            color: $color-text-light;
-            &.active {
-                color: cornflowerblue;
-                font-weight: bold;
-            } 
-            &:hover {
-                font-size: 1.2rem;
-                color: darkred;
-            }
-        }  
-       
+    &__menu-label {
+        color: $color-text-light;
+        margin-left: auto;
+        height: 42px;
+        background-color: grey;
+        width: 44px;
+        margin-right: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-}
+
+    &__menu-btn {
+        opacity: 0;
+    }
+
+    &__menu-btn::checked +&__menu-label &menu-icon {
+        background-color: transparent;
+        &::after {
+            transform: rotate(45deg);
+            top: 0;
+        }
+        &::before {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+    }
+
+
+
+    &__menu-btn:checked + &__nav-links-container{
+        height: calc( 200px);
+    }
+
+    &__menu-icon {
+        height: 2px;
+        background-color: $color-text-light;
+        width: 18px;
+        position: relative;
+
+        &::after, &::before {
+            content: '';
+            height: 2px;
+            background-color: $color-text-light;
+            position: absolute;
+            width: 100%;
+            transition: all .2s ease-out;
+        }
+
+        &::after {
+            top: 5px;
+        }
+
+        &::before {
+            top: -5px;
+        }
+    }
+
+    &__logo {
+        height: 45px;
+    }
+
+
+    &__nav-links-container {
+        
+        list-style: none;
+        position: absolute;
+        top: 50px;
+        background-color: $color-gb-secondary;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        // display:none;
+        transition: all .3s ease-out;
+        flex-direction: column;
+    }
+
+    &__nav-item {
+        padding: 0.75rem;
+               
+        text-decoration: none;
+        color: $color-text-light;
+        
+        &:not(:last-child){
+            border-bottom: 1px solid white; 
+        }
+
+        }  
+    &__nav-link {
+        color: $color-text-light;
+    }    
+
+    }
+
+@media screen and (min-width: 600px) {
+    .navbar{
+        &__menu-label, &__menu-btn {
+            display: none;
+        }
+    
+        &__nav-links-container {
+            position: static;
+            flex-direction: row;
+            height: 100% !important;
+            width: auto;
+        }
+    }
+    
+}    
