@@ -28,7 +28,7 @@
         opacity: 0;
     }
 
-    &__menu-btn::checked +&__menu-label &menu-icon {
+    &__menu-btn::checked + &__menu-label &menu-icon {
         background-color: transparent;
         &::after {
             transform: rotate(45deg);
